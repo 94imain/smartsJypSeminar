@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
             name="mainviewmodel"
             type="com.example.woojinkim.databindingpractice.viewmodel.MainViewModel"/>
     </data>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,6 +31,16 @@
             android:layout_marginTop="100dp"
             android:layout_centerHorizontal="true" />
 
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginTop="300dp"
+            android:visibility="@{mainviewmodel.mProgressStatus2}" />
+
         <Spinner
             android:id="@+id/spinner_companies"
             android:layout_width="wrap_content"
@@ -42,5 +51,16 @@
             android:layout_marginTop="50dp"
             android:layout_centerHorizontal="true">
         </Spinner>
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:entries="@{mainviewmodel.mProductSpinner}"
+            android:visibility="@{mainviewmodel.mProductSpinnerVisibility}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp" />
+
     </RelativeLayout>
 </layout>

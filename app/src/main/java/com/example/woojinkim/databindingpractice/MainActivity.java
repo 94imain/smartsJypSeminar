@@ -20,10 +20,6 @@ public class MainActivity extends AppCompatActivity {
         MainViewModel mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         binding.setMainviewmodel(mainViewModel);
 
-        ArrayList<String> companies = new ArrayList<String>();
-        companies.add("smArts");
-        companies.add("samsung");
-
         binding.spinnerCompanies.setAdapter(
                 new ArrayAdapter<String>(
                         this,
@@ -31,5 +27,6 @@ public class MainActivity extends AppCompatActivity {
                         new ArrayList<String>()
                 )
         );
+        mainViewModel.attachViews(binding);
     }
 }
