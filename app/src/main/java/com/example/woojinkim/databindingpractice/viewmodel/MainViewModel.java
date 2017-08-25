@@ -71,10 +71,12 @@ public class MainViewModel extends ViewModel {
                         anohandler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
+                                //server에서 이름 받아주기
                                 mTitle.set("smarts");
                                 mProgressStatus2.set(View.GONE);
                                 mProductSpinnerVisibility.set(View.VISIBLE);
 
+                                //server에서 받은거 for문으로 돌려주기
                                 ArrayList<String> companies2 = new ArrayList<String>();
                                 companies2.add("전구");
                                 companies2.add("에어컨");
@@ -90,10 +92,12 @@ public class MainViewModel extends ViewModel {
                         anohandler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
+                                 //server에서 이름 받아주기
                                 mTitle.set("samsung");
                                 mProgressStatus2.set(View.GONE);
                                 mProductSpinnerVisibility.set(View.VISIBLE);
 
+                                //server에서 받은거 for문으로 돌려주기
                                 ArrayList<String> companies2 = new ArrayList<String>();
                                 companies2.add("냉장고");
                                 companies2.add("로봇청소기");
